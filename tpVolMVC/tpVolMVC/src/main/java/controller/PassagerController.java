@@ -2,20 +2,15 @@ package controller;
 
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import model.Passager;
 import repositories.PassagerRepository;
-
-
+import repositories.ReservationRepository;
 
 @Controller
 @RequestMapping("/passager")
@@ -23,46 +18,35 @@ public class PassagerController {
 	
 	@Autowired
 	private PassagerRepository passagerRepository;
+	
+	@Autowired
+	private ReservationRepository reservationRepository;
 
-	@RequestMapping(value = { "/" })
-	public String list(Model model) {
-		model.addAttribute("passagers", passagerRepository.findAll());
-		return "passager/list";
+	@RequestMapping("/")
+	public ModelAndView list1() {
+		return new ModelAndView("passager/list", "passagers", passagerRepository.findAll());
 	}
-
-	@RequestMapping("/delete")
-	public String delete(@RequestParam(name = "idPassager") Long idPassager) {
-		passagerRepository.deleteById(idPassager);
-		return "redirect:/passager/";
-	}
-
+	
 	@RequestMapping("/edit")
-	public String edit(@RequestParam(name = "idPassager") Long idPassager, Model model) {
-		Optional<Passager> opt = passagerRepository.findById(idPassager);
+	public ModelAndView edit(@RequestParam(name = "Passagerid") Long Passagerid) {
+		Optional<Passager> opt = passagerRepository.findById(Passagerid);
 		if (opt.isPresent()) {
-			return goEdit(opt.get(), model);
+			return goEdit(opt.get());
 		}
-		return goEdit(new Passager(), model);
+		return new ModelAndView("redirect:/passager/");
 	}
-
+	
+	private ModelAndView goEdit(Passager passager) {
+		ModelAndView modelAndView = new ModelAndView("passager/edit", "passager", passager);
+		modelAndView.addObject("passagers", passagerRepository.findAll());
+		return modelAndView;
+	}
+	
 	@RequestMapping("/save")
-	public String save(@Valid @ModelAttribute("passager") Passager passager, BindingResult br, Model model) {
-		if (br.hasErrors()) {
-			return goEdit(passager, model);
-		} else {
-			passagerRepository.save(passager);
-			return "redirect:/adherent/";
-		}
-	}
-
-	@RequestMapping("/add")
-	public String add(Model model) {
-		return goEdit(new Passager(), model);
-	}
-
-	private String goEdit(Passager passager, Model model) {
-		model.addAttribute("passager", passager);
-		return "passager/edit";
+	private ModelAndView save(Passager passager) {
+		
+		passagerRepository.save(passager);
+		return new ModelAndView("redirect:/passager/");
 	}
 	
 }
