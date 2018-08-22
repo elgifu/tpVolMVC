@@ -35,12 +35,12 @@
 					<%-- 							pattern="dd/MM/yyyy" /></td> --%>
 					<td>${passager.adresse.numero}${passager.adresse.rue}
 						${passager.adresse.codePostal} ${passager.adresse.ville}</td>
-					<td><a href="./reservation?id=${client.id_client}"
+					<td><a href="./reservation?id=${passager.idPassager}"
 						class="btn btn-danger">Reservations</a></td>
 					<td><a href="./edit?id=${passager.idPassager}"
 						class="btn btn-primary">edition</a></td>
 					<td><a href="./delete?id=${passager.idPassager}"
-						class="btn btn-danger">supprimer</a></td>
+						class="btn btn-danger">Supprimer</a></td>
 				</tr>
 			</c:forEach>
 

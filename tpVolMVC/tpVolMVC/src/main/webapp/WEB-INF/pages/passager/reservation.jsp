@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>Liste des reservations du client</title>
+<title>Liste des reservations du passager</title>
 </head>
 <body>
 	<div class="container">
@@ -18,15 +18,20 @@
 				<th>Date</th>
 				<th>Numero</th>
 			</tr>
-			<c:forEach items="${reservations}" var="reservation">
-				<tr>
-					<td>${client.reservations}</td>
+<%-- 			<c:forEach items="${passager.reservations}" var="reservation"> --%>
+<!-- 				<tr> -->
+<%-- 					<td>${passager.reservations.id_reservation}</td> --%>
 					
-					<td>${client.reservation.date}</td>
+<%-- 					<td>${passager.reservation.date}</td> --%>
 					
-					<td>${client.reservation.numero}</td>
-				</tr>
-			</c:forEach>
+<%-- 					<td>${passager.reservation.numero}</td> --%>
+<!-- 				</tr> -->
+<%-- 			</c:forEach> --%>
+			<tr>
+				<td>
+					
+				</td>
+			</tr>
 		</table>
 	</div>
 </body>

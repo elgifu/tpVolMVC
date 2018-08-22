@@ -71,6 +71,6 @@ public class PassagerController {
 	
 	@RequestMapping("/reservation")
 	public ModelAndView listReservation(@RequestParam(name="id") Long id) {
-		return new ModelAndView("client/reservation", "reservations", passagerRepository.findCustomByIdWithReservation(id));
+		return new ModelAndView("passager/reservation", "reservations", passagerRepository.findCustomByIdWithReservation(id));
 	}
 }
