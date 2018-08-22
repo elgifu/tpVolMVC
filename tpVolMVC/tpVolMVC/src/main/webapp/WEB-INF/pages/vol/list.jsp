@@ -34,13 +34,34 @@
 							pattern="HH:mm" /></td>
 					<td><fmt:formatDate value="${vol.heureArrivee}"
 							pattern="HH:mm" /></td>
+					<td><a href="./Resvol?id=${vol.id}" class="btn btn-primary">Liste Réservations</a></td>
 					<td><a href="./delete?id=${vol.id}"
 						class="btn btn-danger">supprimer</a></td>
 					<td><a href="./edit?id=${vol.id}" class="btn btn-primary">edition</a></td>
 				</tr>
-			</c:forEach>
-		</table>
+				</c:forEach>
+				</table>
 		<a href="./add" class="btn btn-primary">ajouter vol</a>
+			<table class="table">
+			<tr>
+				<th>Identifiant du Vol</th>
+				<th>numero de réservation</th>
+				<th>date de la réservation</th>
+				<th>Vol Concerné</th>
+				<th> Client </th>
+				<th>Passager(s)</th>
+				<th></th>
+			</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</table>
 	</div>
 </body>
 </html>
