@@ -31,18 +31,18 @@
 				<tr>
 					<td>${client.id_client}</td>
 					<td><c:choose>
-							<c:when test="${client.getClass().simpleName=='ClientPhysique'}">ClientPhysique
+							<c:when test="${client.getClass().simpleName=='ClientPhysique'}">Client physique
 					</c:when>
-							<c:when test="${client.getClass().simpleName=='ClientMoral'}">ClientMoral
+							<c:when test="${client.getClass().simpleName=='ClientMoral'}">Client moral
 					</c:when>
 
-							<c:otherwise>ClientEl</c:otherwise>
+							<c:otherwise>Client El</c:otherwise>
 						</c:choose></td>
 					<td>${client.nom}</td>
 					<td>${client.numeroTel}</td>
 					<td>${client.numeroFax}</td>
 					<td>${client.email}</td>
-					<td>${client.adresse.numero}${client.adresse.rue}
+					<td>${client.adresse.numero} ${client.adresse.rue}
 						${client.adresse.codePostal} ${client.adresse.ville}</td>
 					<td><c:if
 							test="${client.getClass().simpleName=='ClientPhysique'|| client.getClass().simpleName=='ClientEl'}">
@@ -52,15 +52,18 @@
 							test="${client.getClass().simpleName=='ClientMoral'}">
 							${client.siret}
 						</c:if></td>
-<%-- 					<td>${article.emprunteur.nom}${article.emprunteur.prenom}</td> --%>
-					<td><a href="./delete?id=${client.id_client}" class="btn btn-danger">Delete</a></td>
-					<td><a href="./edit?id=${client.id_client}" class="btn btn-info">Edit</a></td>
+					<%-- 					<td>${article.emprunteur.nom}${article.emprunteur.prenom}</td> --%>
+					<td><a href="./delete?id=${client.id_client}"
+						class="btn btn-danger">Delete</a></td>
+					<td><a href="./edit?id=${client.id_client}"
+						class="btn btn-info">Edit</a></td>
 				</tr>
 			</c:forEach>
 		</table>
-		<a href="./addclientphysique" class="btn btn-info">Add Client physique</a> 
-		<a href="./addclientmoral" class="btn btn-info">Add Client moral</a>
-		<a href="./addclientel" class="btn btn-info">Add Client El</a>
+		<a href="./addclientphysique" class="btn btn-info">Add Client
+			physique</a> <a href="./addclientmoral" class="btn btn-info">Add
+			Client moral</a> <a href="./addclientel" class="btn btn-info">Add
+			Client El</a>
 	</div>
 </body>
 </html>
