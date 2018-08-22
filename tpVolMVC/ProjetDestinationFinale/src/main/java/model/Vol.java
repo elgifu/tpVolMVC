@@ -16,6 +16,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name="vol")
 public class Vol {
@@ -27,15 +29,19 @@ public class Vol {
 	private Long id;
 	@Column(name = "date_depart")
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date dateDepart;
 	@Column(name = "date_arrivee")
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date dateArrivee;
 	@Column(name = "heure_depart")
 	@Temporal(TemporalType.TIME)
+	@DateTimeFormat(pattern="HH:mm")
 	private Date heureDepart;
 	@Column(name = "heure_arrivee")
 	@Temporal(TemporalType.TIME)
+	@DateTimeFormat(pattern="HH:mm")
 	private Date heureArrivee;
 	@ManyToOne
 	@JoinColumn(name = "arrivee_id")
