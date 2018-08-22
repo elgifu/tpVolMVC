@@ -34,13 +34,13 @@ public class ClientController {
 	}
 
 	@RequestMapping("/delete")
-	public String delete(@RequestParam(name = "id_client") Long id) {
+	public String delete(@RequestParam(name = "id") Long id) {
 		clientRepository.deleteById(id);
 		return "redirect:/client/";
 	}
 
 	@RequestMapping("/edit")
-	public ModelAndView edit(@RequestParam(name = "id_client") Long id) {
+	public ModelAndView edit(@RequestParam(name = "id") Long id) {
 		Optional<Client> opt = clientRepository.findById(id);
 		if (opt.isPresent()) {
 			return goEdit(opt.get());
