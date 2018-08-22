@@ -58,5 +58,18 @@ public class Passager {
 	public void setAdresse(Adresse adresse) {
 		this.adresse = adresse;
 	}
+	public Long getIdPassager() {
+		return idPassager;
+	}
+	public void setIdPassager(Long idPassager) {
+		this.idPassager = idPassager;
+	}
+	public Set<Reservation> getReservations() {
+		return reservations;
+	}
+	public void setReservations(Set<Reservation> reservations) {
+		this.reservations = reservations;
+	}
+	
 	
 }
