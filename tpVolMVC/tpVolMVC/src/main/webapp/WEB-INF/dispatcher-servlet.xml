@@ -29,7 +29,7 @@
 
 	<!-- ressources web à integer au projet -->
 	<mvc:resources mapping="/resources/**"
-		location="/resources/" />
+		location="/resources/" />		
 
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"></bean>
