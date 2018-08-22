@@ -37,6 +37,11 @@
 					<form:label path="numero">numéro de réservations : </form:label>
 					<form:input path="numero" cssClass="form-control"/>
 				</div>
+				<div class="form-group">
+					<form:label path="date">Date de Reservation : </form:label>
+					<form:input type="date" path="date"  cssClass="form-control"/>
+					<form:errors path="date"></form:errors>
+				</div>
 				<div class="form-row">
 					<form:label path="vol"> Vol : </form:label>
 						<form:select path="vol.id" cssClass="form-control">
