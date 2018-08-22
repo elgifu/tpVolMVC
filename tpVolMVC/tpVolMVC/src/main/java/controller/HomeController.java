@@ -18,6 +18,7 @@ public class HomeController {
 		return new ModelAndView("home/home");
 	}
 
+<<<<<<< HEAD
 	@RequestMapping("/vol")
 	public ModelAndView vol() {
 		return new ModelAndView("redirect:/vol/");
@@ -38,4 +39,6 @@ public class HomeController {
 		return new ModelAndView("redirect:/passager/");
 	}
 
+=======
+>>>>>>> 567ec053f8004a5f5af3f57dcff96a7d989bb15d
 }
