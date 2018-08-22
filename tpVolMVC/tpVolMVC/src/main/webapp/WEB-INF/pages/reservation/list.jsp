@@ -28,6 +28,7 @@
 						<tr>
 							<td>${reservation.id_reservation}</td>
 							<td>${reservation.numero}</td>
+							<td>${reservation.date}</td>
 							<td>${reservation.vol}</td>
 							<td>${reservation.client}</td>
 							<td><a href="" class="btn btn-secondary">Passager(s)</a></td>
@@ -36,7 +37,7 @@
 			</c:forEach>
 		</table>
 		
-		<footer><a href="./adddvd" class="btn btn-primary">ajouter une réservation</a></footer>
+		<footer><a href="./add" class="btn btn-primary">ajouter une réservation</a></footer>
 	</div>
 	
 </body>
