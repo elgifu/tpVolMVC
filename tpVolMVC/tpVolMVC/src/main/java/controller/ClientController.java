@@ -52,7 +52,7 @@ public class ClientController {
 	}
 
 	@RequestMapping("/reservation")
-	public ModelAndView reservation(@RequestParam(name = "id") Long id) {
+	public ModelAndView listReservation(@RequestParam(name = "id") Long id) {
 //		List<Reservation> reservations = clientRepository.findCustomByIdWithReservation(id); 
 		return new ModelAndView("client/reservation", "reservations", clientRepository.findCustomByIdWithReservation(id));
 
