@@ -54,8 +54,8 @@
 
 	<tx:annotation-driven
 		transaction-manager="transactionManager" />
-		
+
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"></bean>
-		<jpa:repositories base-package="repositories"></jpa:repositories>
+	<jpa:repositories base-package="repositories"></jpa:repositories>
 </beans>
