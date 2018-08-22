@@ -23,4 +23,6 @@ public class ReservationController {
 	public ModelAndView list() {
 		return new ModelAndView("reservation/list", "reservations", reservationRepository.findAll());
 	}
+	
+	
 }

@@ -12,5 +12,9 @@ public class HomeController {
 	public ModelAndView home() {
 		return new ModelAndView("redirect:/home/");
 	}
-
+	
+	@RequestMapping("/")
+	public ModelAndView menu() {
+		return new ModelAndView("home/home");
+	}
 }

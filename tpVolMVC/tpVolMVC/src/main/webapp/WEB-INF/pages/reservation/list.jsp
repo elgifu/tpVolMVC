@@ -36,7 +36,7 @@
 			</c:forEach>
 		</table>
 		
-		<footer><a href="./adddvd" class="btn btn-primary">ajouter dvd</a> <a href="./addbluray" class="btn btn-primary">ajouter Bluray</a></footer>
+		<footer><a href="./adddvd" class="btn btn-primary">ajouter une réservation</a></footer>
 	</div>
 	
 </body>
