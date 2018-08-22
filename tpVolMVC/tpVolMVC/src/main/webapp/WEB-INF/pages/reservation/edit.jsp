@@ -26,6 +26,7 @@
 				<div class="form-group col-md-8">
 							<form:label path="client"> Client : </form:label>
 							<form:select path="client.nom" cssClass="form-control">
+								<form:option value="">pas de client renseigné</form:option>
 								<form:options items="${clients}" itemLabel="nom" itemValue="id_client"/>
 							</form:select>
 				</div>
