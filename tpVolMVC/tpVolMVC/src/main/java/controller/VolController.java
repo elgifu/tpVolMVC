@@ -59,6 +59,12 @@ public ModelAndView save(@Valid @ModelAttribute("vol") Vol vol, BindingResult br
 	}
 }
 
+@RequestMapping("/resvol")
+public ModelAndView listresvol(Model model, Long id) {
+	model.addAttribute("vols",volRepository.findCustomByIdWithReservation(id));
+	return new ModelAndView("vol/list");
+}
+
 
 
 }
