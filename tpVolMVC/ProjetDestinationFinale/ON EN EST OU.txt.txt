@@ -1,0 +1,35 @@
+etape 1 
+creer les classes avec annotations
+aurélien - Clients
+Thomas - Réservations
+Hugo - Passagers
+Mathilde - Vols + villes et escales
+
+étape 2
+repositories
+
+Projet Vol
+Etape 2 repositories
+
+
+
+
+Villes -> aeroports
+
+Aeroports
+
+	Aeroports -> Vol qui arrivent
+	aeroports -> vol qui partent
+	aeroports -> Villes 
+	Aeroports -> Vol escales 
+	
+Vol 
+	Vol -> réservations
+	Vol -> Compagnies aeriennes
+	Vol -> Aeroports (escales)
+	
+Passager -> Toutes les reservations	
+	
+Clients -> toutes les réservations
+
+Compagnie aeriennes -> vols 
