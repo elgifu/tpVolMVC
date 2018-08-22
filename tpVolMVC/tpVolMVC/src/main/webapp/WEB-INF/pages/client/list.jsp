@@ -27,6 +27,8 @@
 				<th>Prenom</th>
 				<th>Siret</th>
 				<th>Reservations</th>
+				<th></th>
+				<th></th>
 			</tr>
 			<c:forEach items="${clients}" var="client">
 				<tr>
@@ -54,11 +56,13 @@
 							${client.siret}
 						</c:if></td>
 					<%-- 					<td>${article.emprunteur.nom}${article.emprunteur.prenom}</td> --%>
+					<td><a href="./reservation?id=${client.id_client}"
+						class="btn btn-danger">Reservations</a></td>
 					<td><a href="./delete?id=${client.id_client}"
 						class="btn btn-danger">Delete</a></td>
 					<td><a href="./edit?id=${client.id_client}"
 						class="btn btn-info">Edit</a></td>
-					<td><a href="./reservation?id=${client.id_client}" class="btn btn-danger">Reservations</a></td>
+
 				</tr>
 			</c:forEach>
 		</table>

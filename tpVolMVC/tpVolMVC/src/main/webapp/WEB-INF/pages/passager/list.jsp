@@ -21,9 +21,8 @@
 				<th>identifiant</th>
 				<th>prenom</th>
 				<th>nom</th>
-				<th>codePostal</th>
-				<th>ville</th>
-				<th>pays</th>
+				<th>Adresse</th>
+				<th>Reservations</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -32,34 +31,19 @@
 					<td>${passager.idPassager }</td>
 					<td>${passager.prenom }</td>
 					<td>${passager.nom }</td>
-<%-- 					<td><fmt:formatDate value="${adherent.dateNaissance }" --%>
-<%-- 							pattern="dd/MM/yyyy" /></td> --%>
-					<td>${passager.adresse.codePostal}</td>
-					<td>${passager.adresse.ville }</td>
-					<td>${passager.adresse.pays }</td>
+					<%-- 					<td><fmt:formatDate value="${adherent.dateNaissance }" --%>
+					<%-- 							pattern="dd/MM/yyyy" /></td> --%>
+					<td>${passager.adresse.numero}${passager.adresse.rue}
+						${passager.adresse.codePostal} ${passager.adresse.ville}</td>
+					<td><a href="./reservation?id=${passager.idPassager}"
+						class="btn btn-danger">Reservations</a></td>
+					<td><a href="./edit?id=${passager.idPassager}"
+						class="btn btn-primary">edition</a></td>
 					<td><a href="./delete?id=${passager.idPassager}"
-						class="btn btn-danger">supprimer</a></td>
-					<td><a href="./edit_passager?Passagerid=${passager.id}" class="btn btn-primary">edition</a></td>
+						class="btn btn-danger">Supprimer</a></td>
 				</tr>
 			</c:forEach>
-			<tr>
-				<td><h4>--------------  Vos / Votre Réservation(s)  --------------</h4></td>
-			</tr>
-			<tr>
-				<th>id_Réservation</th>
-				<th>date_Réservation</th>
-				<th>numéro_Réservation</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<c:forEach items="${passagers}" var="passager">
-				
-					<td>${passager.idPassager }</td>
-					<td>${passager.prenom }</td>
-					<td>${passager.nom }</td>
-				</c:forEach>
-			</tr>
+
 		</table>
 		<a href="./add" class="btn btn-primary">ajouter passager</a>
 	</div>

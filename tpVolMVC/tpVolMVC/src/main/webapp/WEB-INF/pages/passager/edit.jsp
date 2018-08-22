@@ -17,7 +17,7 @@
 		<fieldset>
 			<legend>edition des passagers</legend>
 			<form:form action="save" method="get" modelAttribute="passager">
-				<form:hidden path="version" />
+<%-- 				<form:hidden path="version" /> --%>
 				<div class="form-group">
 					<form:label path="idPassager">id:</form:label>
 					<form:input path="idPassager" cssClass="form-control" readonly="true" />
@@ -33,6 +33,15 @@
 					<form:errors path="nom"></form:errors>
 				</div>
 				<div class="form-group">
+					<form:label path="adresse.numero">Numero:</form:label>
+					<form:input path="adresse.numero" cssClass="form-control"
+						type="number" />
+				</div>
+				<div class="form-group">
+					<form:label path="adresse.rue">Rue:</form:label>
+					<form:input path="adresse.rue" cssClass="form-control" />
+				</div>
+				<div class="form-group">
 					<form:label path="adresse.codePostal">Code Postal:</form:label>
 					<form:input path="adresse.codePostal" cssClass="form-control"
 						type="number" />
@@ -40,10 +49,6 @@
 				<div class="form-group">
 					<form:label path="adresse.ville">Ville:</form:label>
 					<form:input path="adresse.ville" cssClass="form-control" />
-				</div>
-				<div class="form-group">
-					<form:label path="adresse.pays">ville:</form:label>
-					<form:input path="adresse.pays" cssClass="form-control" />
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-success">enregistrer</button>
