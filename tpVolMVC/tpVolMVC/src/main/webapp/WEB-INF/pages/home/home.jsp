@@ -9,9 +9,10 @@
 <meta charset="UTF-8">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>Bienvenue</title>
+<title>Bienvenue sur le TP Vol</title>
 </head>
 <body>
+	<div><h1>Bienvenue sur le site de gestion des vols</h1></div>
 	<div class="container">
 		<a href="./vol" class="btn btn-primary">Vols</a> <a href="./client"
 			class="btn btn-primary">Clients</a> <a href="./reservation"

@@ -17,9 +17,25 @@ public class HomeController {
 	public ModelAndView menu() {
 		return new ModelAndView("home/home");
 	}
-	
-	@RequestMapping("/")
-	public ModelAndView menu() {
-		return new ModelAndView("home/home");
+
+	@RequestMapping("/vol")
+	public ModelAndView vol() {
+		return new ModelAndView("redirect:/vol/");
 	}
+
+	@RequestMapping("/client")
+	public ModelAndView client() {
+		return new ModelAndView("redirect:/client/");
+	}
+
+	@RequestMapping("/reservation")
+	public ModelAndView reservation() {
+		return new ModelAndView("redirect:/reservation/");
+	}
+
+	@RequestMapping("/passager")
+	public ModelAndView passager() {
+		return new ModelAndView("redirect:/passager/");
+	}
+
 }
