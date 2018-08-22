@@ -68,19 +68,19 @@
 					<c:when test="${article.getClass().simpleName=='ClientPhysique'}">
 						<div class="form-group">
 							<form:label path="prenom">bonus:</form:label>
-							<form:checkbox path="prenom" cssClass="form-control" />
+							<form:input path="prenom" cssClass="form-control" />
 						</div>
 					</c:when>
 					<c:when test="${article.getClass().simpleName=='ClientEl'}">
 						<div class="form-group">
 							<form:label path="prenom">bonus:</form:label>
-							<form:checkbox path="prenom" cssClass="form-control" />
+							<form:input path="prenom" cssClass="form-control" />
 						</div>
 					</c:when>
 					<c:otherwise>
 						<div class="form-group">
-							<form:label path="siret">3D:</form:label>
-							<form:checkbox path="siret" cssClass="form-control" />
+							<form:label path="siret">Siret:</form:label>
+							<form:input path="siret" cssClass="form-control" />
 						</div>
 					</c:otherwise>
 				</c:choose>
