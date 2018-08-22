@@ -27,6 +27,7 @@
 					<td>${client.reservation.numero}</td>
 				</tr>
 			</c:forEach>
+			
 		</table>
 	</div>
 </body>

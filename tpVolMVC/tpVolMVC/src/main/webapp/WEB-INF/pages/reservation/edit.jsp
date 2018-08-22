@@ -24,7 +24,7 @@
 			<form:form action="save" method="get" modelAttribute="reservation">
 				
 				<div class="form-group">
-							<form:label path="client"> Client : </form:label>
+							<form:label path="client.id_client"> Client : </form:label>
 							<form:select path="client.id_client" cssClass="form-control">
 								<form:option value="">pas de client renseigné</form:option>
 								<form:options items="${clients}" itemLabel="nom" itemValue="client_id"/>
