@@ -27,16 +27,16 @@
 				<tr>
 					<td>${vol.id}</td>
 					<td><fmt:formatDate value="${vol.dateDepart}"
-							pattern="dd/MM/yyyy" /></td>
+							pattern="yyyy/MM/dd" /></td>
 					<td><fmt:formatDate value="${vol.dateArrivee}"
-							pattern="dd/MM/yyyy" /></td>
+							pattern="yyyy/MM/dd" /></td>
 					<td><fmt:formatDate value="${vol.heureDepart}"
-							pattern="HH:mm:ss" /></td>
+							pattern="HH:mm" /></td>
 					<td><fmt:formatDate value="${vol.heureArrivee}"
-							pattern="HH:mm:ss" /></td>
-					<td><a href="./delete?id=${adherent.id}"
+							pattern="HH:mm" /></td>
+					<td><a href="./delete?id=${vol.id}"
 						class="btn btn-danger">supprimer</a></td>
-					<td><a href="./edit?id=${adherent.id}" class="btn btn-primary">edition</a></td>
+					<td><a href="./edit?id=${vol.id}" class="btn btn-primary">edition</a></td>
 				</tr>
 			</c:forEach>
 		</table>
