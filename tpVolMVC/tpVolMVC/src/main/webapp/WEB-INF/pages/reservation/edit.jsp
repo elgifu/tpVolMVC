@@ -21,22 +21,25 @@
 	<div class="container">
 		<fieldset>
 			<legend>edition d'une réservation</legend>
-			<form:form action="save" method="post" modelAttribute="reservation">
+			<form:form action="save" method="get" modelAttribute="reservation">
 				
-				<div class="form-group col-md-8">
+				<div class="form-group">
 							<form:label path="client"> Client : </form:label>
-							<form:select path="client" cssClass="form-control">
+							<form:select path="client.id_client" cssClass="form-control">
 								<form:option value="">pas de client renseigné</form:option>
-								<form:options items="${clients}" itemLabel="nom" itemValue="id_client"/>
+								<form:options items="${clients}" itemLabel="nom" itemValue="client_id"/>
 							</form:select>
+							<form:errors path="client"></form:errors>
 				</div>
 				<div class="form-group col-md-3">
 					<form:label path="id_reservation">id : </form:label>
 					<form:input path="id_reservation" cssClass="form-control" readonly="true"/>
+					<form:errors path="id_reservation"></form:errors>
 				</div>
-				<div class="form-group col-md-9">
+				<div class="form-group">
 					<form:label path="numero">numéro de réservations : </form:label>
 					<form:input path="numero" cssClass="form-control"/>
+					<form:errors path="numero"></form:errors>
 				</div>
 				<div class="form-group">
 					<form:label path="date">Date de Reservation : </form:label>
@@ -45,13 +48,10 @@
 				</div>
 				<div class="form-row">
 					<form:label path="vol"> Vol : </form:label>
-						<form:select path="vol.id" cssClass="form-control">
+						<form:select path="vol" cssClass="form-control">
 							<form:options items="${vols}" itemValue="id"/>
 						</form:select>
-				</div>
-				<div class="form-group">
-					<form:label path=""> passager : </form:label>
-					<form:input path=""/>
+					<form:errors path="vol"></form:errors>
 				</div>
 				
 				<footer>

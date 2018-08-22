@@ -6,7 +6,6 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import model.Reservation;
+import repositories.ClientRepository;
 import repositories.ReservationRepository;
+import repositories.VolRepository;
 
 @Controller
 @RequestMapping("/reservation")
@@ -22,7 +23,10 @@ public class ReservationController {
 	
 	@Autowired
 	private ReservationRepository reservationRepository;
-	
+	@Autowired
+	private ClientRepository clientRepository;
+	@Autowired
+	private VolRepository volRepository;
 	@RequestMapping("")
 	public ModelAndView home() {
 		return new ModelAndView("redirect:reservation/");
@@ -39,7 +43,7 @@ public class ReservationController {
 			return goEdit(reservation);
 		}else {
 			reservationRepository.save(reservation);
-			return new ModelAndView("redirect:/reservation", "reservation", reservation);
+			return new ModelAndView("redirect:/reservation/");
 		}
 	}
 	
@@ -55,7 +59,7 @@ public class ReservationController {
 		if(opt.isPresent()) {
 			return goEdit(opt.get());
 		}else {
-			return new ModelAndView("redirect:/reservation");
+			return goEdit(new Reservation());
 		}
 	}
 	
@@ -66,7 +70,8 @@ public class ReservationController {
 	
 	public ModelAndView goEdit(Reservation reservation) {
 		ModelAndView mv=new ModelAndView("reservation/edit", "reservation", reservation);
-		mv.addObject("reservations", reservationRepository.findAll());
+		mv.addObject("clients", clientRepository.findAll());
+		mv.addObject("vols",volRepository.findAll());
 		return mv;
 	}
 }

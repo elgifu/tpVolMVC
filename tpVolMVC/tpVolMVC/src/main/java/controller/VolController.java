@@ -32,27 +32,26 @@ public ModelAndView delete(@RequestParam(name="id") Long id) {
 	return new ModelAndView("redirect:/vol/");
 }
 @RequestMapping("/add")
-public ModelAndView add(Model model) {
-	return goEdit(new Vol(),model);
+public ModelAndView add() {
+	return goEdit(new Vol());
 }
-private ModelAndView goEdit(Vol vol, Model model) {
-	model.addAttribute("vol",vol);
-	return new ModelAndView("vol/edit");
+private ModelAndView goEdit(Vol vol) {
+	return new ModelAndView("vol/edit", "vol",vol);
 }
 
 @RequestMapping("/edit")
-public ModelAndView delete(@RequestParam(name="id") Long id,Model model) {
+public ModelAndView edit(@RequestParam(name="id") Long id) {
 	Optional<Vol> opt=volRepository.findById(id);
 	if (opt.isPresent()) {
-		return goEdit(opt.get(), model);
+		return goEdit(opt.get());
 	}
-	return goEdit(new Vol(), model);
+	return goEdit(new Vol());
 }
 
 @RequestMapping("/save")
-public ModelAndView save(@Valid @ModelAttribute("vol") Vol vol, BindingResult br,Model model) {
+public ModelAndView save(@Valid @ModelAttribute("vol") Vol vol, BindingResult br) {
 	if(br.hasErrors()) {
-		return goEdit(vol,model);
+		return goEdit(vol);
 	}else {
 		volRepository.save(vol);
 		return new ModelAndView("redirect:/vol/");
