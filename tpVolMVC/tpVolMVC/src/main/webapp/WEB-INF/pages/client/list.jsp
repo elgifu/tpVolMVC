@@ -56,7 +56,7 @@
 							${client.siret}
 						</c:if></td>
 					<%-- 					<td>${article.emprunteur.nom}${article.emprunteur.prenom}</td> --%>
-					<td><a href="./reservation?id=${client.id_client}"
+					<td><a href="./reservations?id=${client.id_client}"
 						class="btn btn-danger">Reservations</a></td>
 					<td><a href="./delete?id=${client.id_client}"
 						class="btn btn-danger">Delete</a></td>

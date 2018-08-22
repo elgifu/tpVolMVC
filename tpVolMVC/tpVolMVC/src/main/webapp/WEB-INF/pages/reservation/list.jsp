@@ -30,7 +30,7 @@
 							<td>${reservation.numero}</td>
 							<td>${reservation.date}</td>
 							<td>${reservation.vol}</td>
-							<td>${reservation.client}</td>
+							<td>${reservation.client.nom}</td>
 							<td><a href="" class="btn btn-secondary">Passager(s)</a></td>
 							<td><a href="./edit?id=${reservation.id_reservation}" class="btn btn-info">Editer </a> <a href="./delete?id=${reservation.id_reservation}" class="btn btn-danger">Supprimer</a></td>
 						</tr>

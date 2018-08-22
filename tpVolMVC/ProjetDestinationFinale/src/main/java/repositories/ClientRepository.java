@@ -13,6 +13,6 @@ import model.Reservation;
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
 	@Query("select c from Client c left join fetch c.reservations where c.id_client=:idClient")
-	List<Client> findCustomByIdWithReservation(@Param("idClient") Long id_client);
+	Optional<Client> findCustomByIdWithReservation(@Param("idClient") Long id_client);
 
 }

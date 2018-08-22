@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,12 +52,17 @@ public class ClientController {
 		return new ModelAndView("redirect:/client/");
 	}
 
-	@RequestMapping("/reservation")
-	public ModelAndView listReservation(@RequestParam(name = "id") Long id) {
-//		List<Reservation> reservations = clientRepository.findCustomByIdWithReservation(id); 
-		return new ModelAndView("client/reservation", "reservations", clientRepository.findCustomByIdWithReservation(id));
 
-	}
+	
+	@RequestMapping("/reservations")
+    public String reservations(@RequestParam(name = "id") Long id, Model model) {
+        Optional<Client> opt= clientRepository.findCustomByIdWithReservation(id);
+        if (opt.isPresent()) {
+            model.addAttribute("reservations", opt.get().getReservations());
+            return "reservation/list";
+        }
+         return "redirect:/client/";
+    }
 
 	@RequestMapping("/saveclientphysique")
 	public ModelAndView saveClientPhysique(@ModelAttribute("client") ClientPhysique clientPhysique, BindingResult br) {
