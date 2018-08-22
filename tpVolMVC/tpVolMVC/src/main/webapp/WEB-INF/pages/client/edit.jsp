@@ -16,15 +16,15 @@
 		<fieldset>
 			<legend>Edition de client</legend>
 			<c:choose>
-				<c:when test="${article.getClass().simpleName=='ClientPhysique'}">
+				<c:when test="${client.getClass().simpleName=='ClientPhysique'}">
 					<c:url value="saveclientphysique" var="action"></c:url>
 				</c:when>
-				<c:when test="${article.getClass().simpleName=='ClientMoral'}">
+				<c:when test="${client.getClass().simpleName=='ClientMoral'}">
 					<c:url value="saveclientmoral" var="action"></c:url>
 				</c:when>
-				<c:otherwise>
+				<c:when test="${client.getClass().simpleName=='ClientEl'}">
 					<c:url value="saveclientel" var="action"></c:url>
-				</c:otherwise>
+				</c:when>
 			</c:choose>
 			<form:form action="${action}" method="get" modelAttribute="client">
 <%-- 				<form:hidden path="version" /> --%>
@@ -65,24 +65,24 @@
 					<form:input path="adresse.ville" cssClass="form-control" />
 				</div>
 				<c:choose>
-					<c:when test="${article.getClass().simpleName=='ClientPhysique'}">
+					<c:when test="${client.getClass().simpleName=='ClientPhysique'}">
 						<div class="form-group">
-							<form:label path="prenom">bonus:</form:label>
-							<form:checkbox path="prenom" cssClass="form-control" />
+							<form:label path="prenom">Prenom:</form:label>
+							<form:input path="prenom" cssClass="form-control" />
 						</div>
 					</c:when>
-					<c:when test="${article.getClass().simpleName=='ClientEl'}">
+					<c:when test="${client.getClass().simpleName=='ClientEl'}">
 						<div class="form-group">
-							<form:label path="prenom">bonus:</form:label>
-							<form:checkbox path="prenom" cssClass="form-control" />
+							<form:label path="prenom">Prenom:</form:label>
+							<form:input path="prenom" cssClass="form-control" />
 						</div>
 					</c:when>
-					<c:otherwise>
+					<c:when test="${client.getClass().simpleName=='ClientMoral'}">
 						<div class="form-group">
-							<form:label path="siret">3D:</form:label>
-							<form:checkbox path="siret" cssClass="form-control" />
+							<form:label path="siret">Siret:</form:label>
+							<form:input path="siret" cssClass="form-control" />
 						</div>
-					</c:otherwise>
+					</c:when>
 				</c:choose>
 <!-- 				<div class="form-group"> -->
 <%-- 					<form:label path="emprunteur">Emprunteur:</form:label> --%>

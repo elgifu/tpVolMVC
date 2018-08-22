@@ -26,6 +26,7 @@
 				<th>Adresse</th>
 				<th>Prenom</th>
 				<th>Siret</th>
+				<th>Reservations</th>
 			</tr>
 			<c:forEach items="${clients}" var="client">
 				<tr>
@@ -42,7 +43,7 @@
 					<td>${client.numeroTel}</td>
 					<td>${client.numeroFax}</td>
 					<td>${client.email}</td>
-					<td>${client.adresse.numero} ${client.adresse.rue}
+					<td>${client.adresse.numero}${client.adresse.rue}
 						${client.adresse.codePostal} ${client.adresse.ville}</td>
 					<td><c:if
 							test="${client.getClass().simpleName=='ClientPhysique'|| client.getClass().simpleName=='ClientEl'}">
@@ -57,6 +58,7 @@
 						class="btn btn-danger">Delete</a></td>
 					<td><a href="./edit?id=${client.id_client}"
 						class="btn btn-info">Edit</a></td>
+					<td><a href="./reservation?id=${client.id_client}" class="btn btn-danger">Reservations</a></td>
 				</tr>
 			</c:forEach>
 		</table>

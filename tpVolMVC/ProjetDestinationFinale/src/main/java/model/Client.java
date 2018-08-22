@@ -30,7 +30,7 @@ public abstract class Client {
 	@Column(name = "id_client")
 	private Long id_client;
 	
-	@Column(name = "nom_client", length=20)
+	@Column(name = "nom_client", length=50)
 	private String nom;
 	
 	@Column(name="tel_client",length=15)
