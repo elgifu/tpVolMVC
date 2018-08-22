@@ -36,7 +36,7 @@
 			</c:forEach>
 		</table>
 		
-		<footer><a href="./adddvd" class="btn btn-primary">ajouter une réservation</a></footer>
+		<footer><a href="./add" class="btn btn-primary">ajouter une réservation</a></footer>
 	</div>
 	
 </body>
