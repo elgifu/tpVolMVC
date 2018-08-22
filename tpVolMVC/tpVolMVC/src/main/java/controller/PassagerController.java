@@ -18,6 +18,7 @@ import repositories.PassagerRepository;
 
 
 @Controller
+@RequestMapping("/passager")
 public class PassagerController {
 	
 	@Autowired
