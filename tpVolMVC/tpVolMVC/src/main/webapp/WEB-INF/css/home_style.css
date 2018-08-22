@@ -1,0 +1,31 @@
+.jumbotron{
+	Text-align:center;
+}
+
+.container-fluid{
+	border:1px solid red;
+}
+
+.col-sm{
+	border:1px solid #2bce33;
+}
+
+.btn-default{
+	margin:0px;
+	padding:20px;
+}
+
+.card{
+	margin:15px;
+	padding:20px;
+	display:inline-block;
+}
+
+.btn-primary{
+	display:inline-block;
+	position: center;
+}
+
+.cardimg{
+	height:150px;
+}
