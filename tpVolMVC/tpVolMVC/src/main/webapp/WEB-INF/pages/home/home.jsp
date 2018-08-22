@@ -34,24 +34,39 @@
 
 		<div class="row">
 			<div class="col-md-10">
-				<img class="cardimg" alt="" src="images/avion.jpg">
 				<div id="d1" class="card" style="width: 18rem;">
 					<div class="card-body">
+						<img class="cardimg" alt="" src="images/avion.jpg"><a
+							href="./vol" target="_blank" title=""><h5 class="card-title">Gestion
+								des vols:</h5></a>
+						<p class="card-text"></p>
 						<a href="./vol" class="btn btn-primary">Vols</a>
 					</div>
 				</div>
 				<div id="d2" class="card" style="width: 18rem;">
 					<div class="card-body">
+						<img class="cardimg" alt="" src="images/client.jpg"> <a
+							href="./client" target="_blank" title=""><h5
+								class="card-title">Gestion des clients:</h5></a>
+						<p class="card-text"></p>
 						<a href="./client" class="btn btn-primary">Clients</a>
 					</div>
 				</div>
 				<div id="d3" class="card" style="width: 18rem;">
 					<div class="card-body">
+						<img class="cardimg" alt="" src="images/reservation.jpg"><a
+							href="./reservation" target="_blank" title=""><h5
+								class="card-title">Gestion des reservations:</h5></a>
+						<p class="card-text"></p>
 						<a href="./reservation" class="btn btn-primary">Réservations</a>
 					</div>
 				</div>
 				<div id="d4" class="card" style="width: 18rem;">
 					<div class="card-body">
+						<img class="cardimg" alt="" src="images/passager.jpg"><a
+							href="./passager" target="_blank" title=""><h5
+								class="card-title">Gestion des passagers:</h5></a>
+						<p class="card-text"></p>
 						<a href="./passager" class="btn btn-primary">Passagers</a>
 					</div>
 				</div>
