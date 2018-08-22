@@ -108,6 +108,14 @@ public class Reservation {
 		return result;
 	}
 
+	public Long getId_reservation() {
+		return id_reservation;
+	}
+
+	public void setId_reservation(Long id_reservation) {
+		this.id_reservation = id_reservation;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
