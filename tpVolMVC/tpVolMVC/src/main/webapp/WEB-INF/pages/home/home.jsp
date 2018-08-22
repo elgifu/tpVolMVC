@@ -12,7 +12,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel=stylesheet type="text/css" href="css/homeStyle.css">
+<link rel=stylesheet type="text/css" href="../css/homeStyle.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
 					<div id="d1" class="card" style="width: 25rem;">
 						<div class="card-body">
 							<img class="cardimg" alt=""
-								src="src/main/webapp/WEB-INF/images/avion.jpg"><a
+								src="../images/avion.jpg"><a
 								href="./vol" target="_blank" title=""><h5 class="card-title">Gestion
 									des vols:</h5></a>
 							<p class="card-text"></p>
@@ -48,7 +48,7 @@
 					</div>
 					<div id="d2" class="card" style="width: 25rem;">
 						<div class="card-body">
-							<img class="cardimg" alt="" src="images/client.jpg"> <a
+							<img class="cardimg" alt="" src="../images/client.jpg"> <a
 								href="./client" target="_blank" title=""><h5
 									class="card-title">Gestion des clients:</h5></a>
 							<p class="card-text"></p>
@@ -57,7 +57,7 @@
 					</div>
 					<div id="d3" class="card" style="width: 25rem;">
 						<div class="card-body">
-							<img class="cardimg" alt="" src="images/reservation.jpg"><a
+							<img class="cardimg" alt="" src="../images/reservation.jpg"><a
 								href="./reservation" target="_blank" title=""><h5
 									class="card-title">Gestion des reservations:</h5></a>
 							<p class="card-text"></p>
@@ -66,7 +66,7 @@
 					</div>
 					<div id="d4" class="card" style="width: 25rem;">
 						<div class="card-body">
-							<img class="cardimg" alt="" src="images/passager.jpg"><a
+							<img class="cardimg" alt="" src="../images/passager.jpg"><a
 								href="./passager" target="_blank" title=""><h5
 									class="card-title">Gestion des passagers:</h5></a>
 							<p class="card-text"></p>
