@@ -17,9 +17,5 @@ public class HomeController {
 	public ModelAndView menu() {
 		return new ModelAndView("home/home");
 	}
-	
-	@RequestMapping("/")
-	public ModelAndView menu() {
-		return new ModelAndView("home/home");
-	}
+
 }
