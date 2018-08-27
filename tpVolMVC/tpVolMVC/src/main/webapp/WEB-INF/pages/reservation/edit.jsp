@@ -53,7 +53,12 @@
 						</form:select>
 					<form:errors path="vol"></form:errors>
 				</div>
-				
+<!-- 				<label for="client">Client </label> -->
+<!--                    <select name="clientId"  class="form-control"> -->
+
+<%--                        <c:forEach items="${clients}" var="client"> --%>
+<%--                            <option value="${client.nom}">${client.id_client}</option> --%>
+<%--                        </c:forEach> --%>
 				<footer>
 					<button type="submit" class="btn btn-success">Valider</button>
 					<a href="./" class="btn btn-primary">Retour</a>

@@ -58,10 +58,14 @@ public ModelAndView save(@Valid @ModelAttribute("vol") Vol vol, BindingResult br
 	}
 }
 
-@RequestMapping("/resvol")
-public ModelAndView listresvol(Model model, Long id) {
-	model.addAttribute("vols",volRepository.findCustomByIdWithReservation(id));
-	return new ModelAndView("vol/list");
+@RequestMapping("/reservationsVols")
+public String reservations(@RequestParam(name = "id") Long id, Model model) {
+    Optional<Reservations> opt= passagerRepository.findCustomByIdWithReservation(id);
+    if (opt.isPresent()) {
+        model.addAttribute("reservations", opt.get().getReservations());
+        return "reservation/list";
+    }
+     return "redirect:/passager/";
 }
 
 
