@@ -38,8 +38,7 @@
 				<div class="row">
 					<div id="d1" class="card" style="width: 25rem;">
 						<div class="card-body">
-							<img class="cardimg" alt=""
-								src="../images/avion.jpg"><a
+							<img class="cardimg" alt="" src="../images/avion.jpg"><a
 								href="./vol" target="_blank" title=""><h5 class="card-title">Gestion
 									des vols:</h5></a>
 							<p class="card-text"></p>
